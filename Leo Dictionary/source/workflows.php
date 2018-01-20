@@ -2,7 +2,7 @@
 /**
 * Name: 		Workflows
 * Description: 	This PHP class object provides several useful functions for retrieving, parsing,
-* 				and formatting data to be used with Alfred 2 Workflows.
+* 				and formatting data to be used with Alfred 3 Workflows.
 * Author: 		David Ferguson (@jdfwarrior)
 * Revised: 		6/6/2013
 * Version:		0.3.3

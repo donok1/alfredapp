@@ -1,7 +1,7 @@
-Alfred 2 Helpers and Workflows
+Alfred 3 Helpers and Workflows
 =========
 
-This repository contains my created Alfred 2 (http://www.alfredapp.com) workflows:
+This repository contains my created Alfred 3 (http://www.alfredapp.com) workflows:
 
 Leo Dictionary
 ---------
