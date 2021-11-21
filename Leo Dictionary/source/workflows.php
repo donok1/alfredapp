@@ -2,10 +2,10 @@
 /**
 * Name: 		Workflows
 * Description: 	This PHP class object provides several useful functions for retrieving, parsing,
-* 				and formatting data to be used with Alfred 3 Workflows.
-* Author: 		David Ferguson (@jdfwarrior)
-* Revised: 		6/6/2013
-* Version:		0.3.3
+* 				and formatting data to be used with Alfred 2 Workflows.
+* Author: 		David Ferguson (@jdfwarrior), revised by @donok1
+* Revised: 		21/11/2021
+* Version:		0.3.4
 */
 class Workflows {
 
@@ -38,8 +38,8 @@ class Workflows {
 			$this->bundle = $bundleid;
 		endif;
 
-		$this->cache = $this->home. "/Library/Caches/com.runningwithcrayons.Alfred-3/Workflow Data/".$this->bundle;
-		$this->data  = $this->home. "/Library/Application Support/Alfred 3/Workflow Data/".$this->bundle;
+		$this->cache = $this->home. "/Library/Caches/com.runningwithcrayons.Alfred/Workflow Data/".$this->bundle;
+		$this->data  = $this->home. "/Library/Application Support/Alfred 2/Workflow Data/".$this->bundle;
 
 		if ( !file_exists( $this->cache ) ):
 			exec("mkdir '".$this->cache."'");
@@ -313,7 +313,12 @@ class Workflows {
 			return false;
 		endif;
 
-		exec( 'defaults read "'. $b .'" '.$a, $out );	// Execute system call to read plist value
+// 		print  "  ####    #### "; 
+
+// 		print  'defaults read "'. $b .'" '.$a; 
+
+ 		exec( 'plutil -extract '. $a .' raw "'.$b.'"', $out );
+// 		exec( 'defaults read "'. $b .'" '.$a, $out );	// Execute system call to read plist value
 
 		if ( $out == "" ):
 			return false;

@@ -17,8 +17,11 @@ class Leo {
 
 		$cleanedInput = clean_utf8($input);
 		$url = "https://dict.leo.org/dictQuery/m-vocab/".$this->translationCode."/query.xml?tolerMode=nof&lp=".$this->translationCode."&lang=de&rmWords=off&directN=0&rmSearch=on&search=".urlencode($cleanedInput)."&searchLoc=0&resultOrder=basic&multiwordShowSingle=on&sectLenMax=16";
+		//$url = "http://dict.leo.org/dictQuery/m-vocab/".$this->translationCode."/?lang=en&searchLoc=0&search=".urlencode($cleanedInput);
 
+// 		print $url;
 		$str = $w->request($url, array(CURLOPT_CONNECTTIMEOUT => 5, CURLOPT_TIMEOUT => 5));
+// 		print $str;
 		if (!empty($str)) {
 			$options = $leo->get($str);
 

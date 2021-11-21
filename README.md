@@ -1,7 +1,7 @@
-Alfred 3 Helpers and Workflows
+Alfred Helpers and Workflows
 =========
 
-This repository contains my created Alfred 3 (http://www.alfredapp.com) workflows:
+This repository contains my created Alfred (http://www.alfredapp.com) workflows:
 
 Leo Dictionary
 ---------
@@ -11,12 +11,17 @@ Searches the Leo dictionary (http://dict.leo.org) for the languages german, engl
 With Version 1.2 newly introduced a somewhat "automatic" detection of the language of the entered word. 
 
 There are three ways to search Leo:
-* de - Translating a german word to english and vice versa.
-* df - Translating a german word to french and vice versa.
-* ds - Translating a german word to spanish and vice versa.
+* deen - Translating a german word to english and vice versa.
+* defr - Translating a german word to french and vice versa.
+* desp - Translating a german word to spanish and vice versa.
 * dp - Translating a german word to polish and vice versa.
+* di - Translating a german word to italian and vice versa.
+* dc - Translating a german word to chinese and vice versa.
+* dr - Translating a german word to russian and vice versa.
+* db - Translating a german word to brasilian and vice versa.
 
-Download the workflow: [Leo Dictionary](https://github.com/psistorm/alfredapp/blob/master/Leo%20Dictionary/Leo%20Dictionary.alfredworkflow?raw=true)
+
+Download the workflow: [Leo Dictionary](https://github.com/donok1/alfredapp/blob/master/Leo%20Dictionary/Leo%20Dictionary.alfredworkflow?raw=true)
 
 Release Notes:
 
@@ -45,6 +50,11 @@ V 1.4
 V 1.4.1
 - Fix for changes in Leo site, now using the XML API ([Daniel Diekmeier][danieldiekmeier])
 
+V 1.4.2
+- Fix reading of plist on macOS 12 Monterey ([donok1][donok1])
+
+
 [kusnier]: https://github.com/kusnier
 [oderwat]: https://github.com/oderwat
 [danieldiekmeier]: https://github.com/danieldiekmeier
+[donok1]: https://github.com/donok1
